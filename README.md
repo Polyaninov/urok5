@@ -1,5 +1,6 @@
 
     1. Установить mongodb
+    sudo systemctl status mongod
     
     2. Выяснить, где находится директория с данными командой grep -i dbPath /etc/mongod.conf
        pmn@pmn-VirtualBox:~$ grep -i dbPath /etc/mongod.conf
@@ -23,6 +24,9 @@ pmn@pmn-VirtualBox:~$ sudo vgcreate vg01 /dev/sdb
        Logical volume "lv01" created.
        pmn@pmn-VirtualBox:~$ sudo lvs
 
+          pmn@pmn-VirtualBox:~$ mkfs.ext4 /dev/vg01/lv01
+
+          pmn@pmn-VirtualBox:~$ sudo mount /dev/vg01/lv01 /var/lib/mongodb
 
     
     6 .Убедиться, что все прошло корректно (сервис mongodb запущен, можно подключиться к БД)
