@@ -18,6 +18,10 @@ pmn@pmn-VirtualBox:~$ sudo vgcreate vg01 /dev/sdb
   Volume group "vg01" successfully created
   
     
-    5 .Создать Logical Volume mongo-data и вынести директорию из п6 на него
+    5 .Создать Logical Volume mongo-data и вынести директорию из п6 на него  Nazval kak lv01 !!!!
+       pmn@pmn-VirtualBox:~$ sudo lvcreate -l 100%FREE -n lv01 vg01
+       Logical volume "lv01" created.
+
+    
     6 .Убедиться, что все прошло корректно (сервис mongodb запущен, можно подключиться к БД)
 
