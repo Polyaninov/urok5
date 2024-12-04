@@ -30,4 +30,5 @@ pmn@pmn-VirtualBox:~$ sudo vgcreate vg01 /dev/sdb
 
     
     6 .Убедиться, что все прошло корректно (сервис mongodb запущен, можно подключиться к БД)
+                mongosh
 
